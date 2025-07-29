@@ -1,0 +1,11 @@
+body {
+  font-family: "Courier New", monospace;
+  background: #0a0a0a;
+  color: #f2f2f2;
+}
+.image-container {
+  text-align: center;
+}
+.image-container img {
+  width: 500px; /* or any size you want */
+}

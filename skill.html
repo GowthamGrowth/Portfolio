@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gowtham Portfolio</title>
+    <link rel="stylesheet" href="skill.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <div class="logo">
+        <a href="index.html">Gowtham</a>
+      </div>
+      <nav>
+        <a href="#home">About</a>
+        <a href="#services">Skill</a>
+        <a href="#resume">Project</a>
+        <!-- <a href="#work">Work</a>-->
+        <a href="#contact">Contact</a>
+        <a href="https://www.linkedin.com/in/gowtham9842" class="hire-btn"
+          >Hire me</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+      <div class="home-content">
+        <div class="text">
+          <p class="tag">Developer</p>
+          <h1>Hello I'm <span>Gowtham</span></h1>
+          <p>
+            I’m a passionate and creative IT enthusiast with a strong interest
+            in UI/UX design and application development. I enjoy building
+            user-friendly interfaces and creating apps that solve real-world
+            problems. My goal is to work in a dynamic tech environment where I
+            can grow as a developer and contribute to meaningful projects. I
+            believe in continuous learning and always look for ways to
+            improve my skills.
+          </p>
+          <a href="Resume.pdf" download class="btn">Download CV</a>
+          <div class="socials">
+            <a href="#"><i class="fas fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="image">
+          <img src="photo.jpg" alt="Your Photo" />
+          <div class="circle-border"></div>
+        </div>
+      </div>
+      <div class="stats">
+        <div><strong>0</strong><br />Years of experience</div>
+        <div><strong>4</strong><br />Projects completed</div>
+        <div><strong>0</strong><br />Technologies mastered</div>
+        <div><strong>0</strong><br />Code commits</div>
+      </div>
+    </section>
+
+    <!-- Other Sections -->
+    <section id="services">
+      <h2>Skill</h2>
+      <section class="skills-section">
+        <div class="skills-left">
+          <!--  <h2>
+            <span>My</span> Professional<br />Background Skills and
+            Accomplishments
+          </h2>-->
+          <div class="tools-icons">
+            <img
+              src="https://img.icons8.com/color/96/figma--v1.png"
+              alt="Figma"
+            />
+            <img src="java.jpg" alt="Webflow" />
+            <img src="sql.png" alt="Framer" />
+            <img src="html.jpg" alt="Code" />
+          </div>
+          <div class="skill-bar">
+            <p>UI/UX Design <span>90%</span></p>
+            <div class="bar"><div style="width: 90%"></div></div>
+
+            <p>Figma<span>90%</span></p>
+            <div class="bar"><div style="width: 90%"></div></div>
+
+            <p>Java <span>85%</span></p>
+            <div class="bar"><div style="width: 85%"></div></div>
+          </div>
+        </div>
+
+        <div class="skills-right">
+          <p>Sql <span>90%</span></p>
+          <div class="bar"><div style="width: 90%"></div></div>
+          <p>Python <span>50%</span></p>
+          <div class="bar"><div style="width: 50%"></div></div>
+
+          <p>Html <span>80%</span></p>
+          <div class="bar"><div style="width: 80%"></div></div>
+        </div>
+      </section>
+    </section>
+
+    <section id="resume">
+      <h2>Project</h2>
+      <div class="filter-buttons">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('product')">Figma</button>
+        <button onclick="filterProjects('interesting')">Java</button>
+        <button onclick="filterProjects('web')">Web App</button>
+      </div>
+
+      <!-- Project Categories -->
+      <div id="all" class="projects-wrapper active">
+        <div class="project-card" onclick="openModal('Product App')">
+          <a
+            href="https://www.figma.com/proto/8AfqsadsDOfXnLhAWrSFyQ/Instagram?node-id=131-187&starting-point-node-id=131%3A187&t=DahZj6C7BiFHp0Ii-1"
+            ><img src="insta.jpg"
+          /></a>
+          <h3>Instagram</h3>
+          <p>Figma</p>
+        </div>
+        <div class="project-card" onclick="openModal('Product App')">
+          <a
+            href="https://www.figma.com/proto/HRMF5XhLN0ycoqGvzie6NM/portfolio?node-id=5-26&p=f&t=r45WIESRCl7bfyEQ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A26"
+            ><img src="pro.png"
+          /></a>
+          <h3>Portfolio</h3>
+          <p>Figma</p>
+        </div>
+        <div class="project-card" onclick="openModal('Product App')">
+          <a href="https://speak-ease.onrender.com/"><img src="web.png" /></a>
+          <h3>Speak Ease</h3>
+          <p>WEB</p>
+        </div>
+      </div>
+      <div id="product" class="projects-wrapper">
+        <div class="project-card" onclick="openModal('Product App')">
+          <a
+            href="https://www.figma.com/proto/8AfqsadsDOfXnLhAWrSFyQ/Instagram?node-id=131-187&starting-point-node-id=131%3A187&t=DahZj6C7BiFHp0Ii-1"
+            ><img src="insta.jpg"
+          /></a>
+          <h3>Instagram</h3>
+          <p>Figma</p>
+        </div>
+        <div class="project-card" onclick="openModal('Product App')">
+          <a
+            href="https://www.figma.com/proto/HRMF5XhLN0ycoqGvzie6NM/portfolio?node-id=5-26&p=f&t=r45WIESRCl7bfyEQ-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A26"
+            ><img src="pro.png"
+          /></a>
+          <h3>Portfolio</h3>
+          <p>Figma</p>
+        </div>
+      </div>
+
+      <div id="interesting" class="projects-wrapper">
+        <div class="project-card" onclick="openModal('Cool Project')">
+          <img src="https://img.icons8.com/emoji/96/star.png" />
+          <h3>PROJECT</h3>
+          <p>STAR</p>
+        </div>
+      </div>
+
+      <div id="web" class="projects-wrapper">
+        <div class="project-card" onclick="openModal('Web App UI')">
+          <a href="https://speak-ease.onrender.com/"><img src="web.png" /></a>
+          <h3>Speak Ease</h3>
+          <p>WEB</p>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <!--  <div id="modal" class="modal">
+        <div class="modal-content">
+          <img src="https://img.icons8.com/emoji/96/theater-masks.png" />
+          <h2 id="modal-title">Project Title</h2>
+          <p>This is the detailed view of the selected project.</p>
+          <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+      </div>-->
+
+      <script src="skill.js"></script>
+    </section>
+
+    <!-- <section id="work">
+      <h2>Work</h2>
+      <p>Portfolio & Case Studies</p>
+    </section>-->
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-form">
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="your name" required />
+          <input type="email" id="email" placeholder="your Email" required />
+          <input
+            type="text"
+            id="contact"
+            placeholder="contact number"
+            required
+          />
+          <textarea id="message" placeholder="your message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="icons">
+          <img src="gmail.png" alt="Gmail" onclick="openGmail()" />
+          <img src="linkedin.png" alt="LinkedIn" onclick="openLinkedIn()" />
+        </div>
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+      <script src="skill.js"></script>
+    </section>
+  </body>
+</html>

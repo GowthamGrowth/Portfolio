@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Lock</title>
+    <link rel="stylesheet" href="doc.css" />
+    <style>
+      .name {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+      }
+
+      #lock-screen {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: white;
+      }
+
+      .lock-box {
+        background: #fdfdfd;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .lock-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      input[type="password"] {
+        padding: 10px 20px;
+        width: 250px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: 1px solid #aaa;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        background: #3498db;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .btn:hover {
+        background: #2c80b4;
+      }
+
+      #main-content {
+        display: none;
+        padding: 20px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h2 {
+        margin-bottom: 10px;
+      }
+
+      .card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .circle {
+        width: 70px;
+        height: 70px;
+        background-color: #3498db;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .circle:hover {
+        background-color: #2c80b4;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Name -->
+    <a href="index.html"><div class="name">GOWTHAM</div></a>
+
+    <!-- Lock Screen -->
+    <div id="lock-screen">
+      <div class="lock-box">
+        <div class="lock-title">🔒 Enter Pattern to Unlock</div>
+        <input
+          type="password"
+          id="patternInput"
+          placeholder="Enter the Password"
+        />
+        <div class="btn-group">
+          <button class="btn" onclick="checkPattern()">UNLOCK</button>
+          <button class="btn" onclick="clearPattern()">CLEAR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content (Hidden Initially) -->
+    <div id="main-content">
+      <div class="container">
+        <div class="section">
+          <h2>HSC</h2>
+          <div class="card">
+            <a href="10.html"><div class="circle">X</div></a>
+            <a href="11.html"><div class="circle">XI</div></a>
+            <a href="12.html"><div class="circle">XII</div></a>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>UG</h2>
+          <div class="card">
+            <a href="ug1.html"><div class="circle">I</div></a>
+            <a href="ug2.html"><div class="circle">II</div></a>
+            <a href="ug3.html"><div class="circle">III</div></a>
+            <a href="ug4.html"><div class="circle">IV</div></a>
+            <a href="ug5.html"><div class="circle">V</div></a>
+            <a href="ug6.html"><div class="circle">VI</div></a>
+          </div>
+        </div>
+        <div class="section">
+          <h2>CERTIFICATE</h2>
+          <div class="card">
+            <a href="java.html"><div class="circle">Java</div></a>
+            <a href="hack.html"><div class="circle">Hack</div></a>
+            <a href="google.html"><div class="circle">AI</div></a>
+          </div>
+        </div>
+        <div class="section">
+           <a href="All documents..pdf" download class="btn">Download All</a>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      const correctPattern = "9842"; // Set your pattern number
+
+      function checkPattern() {
+        const input = document.getElementById("patternInput").value;
+        if (input === correctPattern) {
+          document.getElementById("lock-screen").style.display = "none";
+          document.getElementById("main-content").style.display = "block";
+        } else {
+          alert("❌ Wrong pattern. Try again.");
+          clearPattern();
+        }
+      }
+
+      function clearPattern() {
+        document.getElementById("patternInput").value = "";
+      }
+    </script>
+  </body>
+</html>
