@@ -1,10 +1,21 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #02010a, #05052a);
   font-family: "Segoe UI", sans-serif;
   color: #fff;
+  padding: 20px;
 }
+
+/* Contact Form */
 .contact-form {
   width: 100%;
   background: #0d0d0d;
@@ -24,7 +35,8 @@ textarea {
 }
 
 button {
-  width: 20%;
+  width: 100%;
+  max-width: 200px;
   padding: 12px;
   background: linear-gradient(to right, #00ff88, #00bfff);
   border: none;
@@ -55,15 +67,11 @@ button {
   flex-wrap: wrap;
 }
 
-.skills-left {
-  flex: 1;
-  min-width: 300px;
-  margin: 20px;
-}
+.skills-left,
 .skills-right {
   flex: 1;
-  min-width: 300px;
-  margin: 110px;
+  min-width: 280px;
+  margin: 20px;
 }
 
 .skills-left h2 {
@@ -128,14 +136,7 @@ button {
 
 .no-code-icons img {
   width: 40px;
-   height: 40px;
-}
-
-body {
-  background-color: #0d0d0d;
-  font-family: Arial, sans-serif;
-  color: white;
-  padding: 20px;
+  height: 40px;
 }
 
 h2 {
@@ -192,7 +193,6 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -227,18 +227,6 @@ h2 {
   cursor: pointer;
   border-radius: 5px;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Courier New", monospace;
-  background: #0a0a0a;
-  color: #f2f2f2;
-}
 
 header {
   position: fixed;
@@ -250,6 +238,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 999;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -258,10 +247,16 @@ header {
   font-weight: bold;
 }
 
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 nav a {
   color: #fff;
   text-decoration: none;
-  margin-left: 25px;
+  margin-left: 15px;
   font-size: 1rem;
   position: relative;
 }
@@ -286,7 +281,6 @@ nav a:hover::after {
   padding: 8px 20px;
   border-radius: 25px;
   color: #000 !important;
-  margin-left: 40px;
 }
 
 section {
@@ -396,10 +390,12 @@ h1 span {
   justify-content: space-around;
   margin-top: 60px;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .stats div {
   font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
 .stats strong {
@@ -425,8 +421,18 @@ h1 span {
 
   nav {
     margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 20px;
   }
 }
